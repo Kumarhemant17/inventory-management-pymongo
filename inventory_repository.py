@@ -45,7 +45,7 @@ def update_product_fields(product_identifier, updated_fields):
             product_identifier,
             {"$set": updated_fields}
         )
-        return result.modifed_count>0
+        return result.modified_count > 0
     except PyMongoError:
         return False
     
